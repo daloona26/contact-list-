@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9ac574bb23.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'style-edit.css'%}" />
+    <title>Delete Contact</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero">
+        <a href="{% url 'edit-contact' contact.id %}">
+          <i class="fa-solid fa-circle-left back-btn"></i>
+        </a>
+
+        <div class="hero-info">
+          <h1 class="name">{{contact.full_name}}</h1>
+          <p class="relationship">{{contact.relationship}}</p>
+        </div>
+      </header>
+
+      <section class="button-container">
+        <p>Are you sure you want to delete this contact?</p>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="update-contact">
+            <i class="fa-solid fa-check icon-gradient"></i>
+            <button type="submit" class="button">Delete Contact</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>

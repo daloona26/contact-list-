@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9ac574bb23.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <title>Contact List App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <form action="/" method="GET" class="search-bar" id="search-form">
+          <input
+            type="search"
+            name="search-area"
+            class="contact-search"
+            placeholder="search"
+            value="{{search_input}}"
+          />
+        </form>
+        <a href="{% url 'add-contact' %}">
+          <i class="fa-solid fa-circle-plus add"></i>
+        </a>
+      </header>
+
+      <section class="contacts-library">
+        <ul class="contacts-list">
+          {% for contact in contacts %}
+          <a href="{% url 'profile' contact.id %}">
+            <div class="contact-section">
+              <li class="list-item">
+                <p class="contact-name">{{contact.full_name}}</p>
+                <p class="relationship">{{contact.relationship}}</p>
+              </li>
+              <li class="list-item">
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-comment-sms text"></i>
+              </li>
+            </div>
+          </a>
+          <hr />
+          {%empty%}
+          <h3 style="color: #fff; padding: 20px">No Contacts Found</h3>
+          {% endfor %}
+          <!-- <a href="contact-profile.html">
+            <div class="contact-section">
+              <li class="list-item">
+                <p class="contact-name">Ahmad mdij</p>
+                <p class="relationship">Family</p>
+              </li>
+              <li class="list-item">
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-comment-sms text"></i>
+              </li>
+            </div>
+          </a>
+          <hr />
+          <a href="contact-profile.html">
+            <div class="contact-section">
+              <li class="list-item">
+                <p class="contact-name">Ahmad mdij</p>
+                <p class="relationship">Work</p>
+              </li>
+              <li class="list-item">
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-comment-sms text"></i>
+              </li>
+            </div>
+          </a>
+          <hr />
+          <a href="contact-profile.html">
+            <div class="contact-section">
+              <li class="list-item">
+                <p class="contact-name">Ahmad mdij</p>
+                <p class="relationship">Friend</p>
+              </li>
+              <li class="list-item">
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-comment-sms text"></i>
+              </li>
+            </div>
+          </a>
+          <hr />
+          <a href="contact-profile.html">
+            <div class="contact-section">
+              <li class="list-item">
+                <p class="contact-name">Ahmad mdij</p>
+                <p class="relationship">Friend</p>
+              </li>
+              <li class="list-item">
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-comment-sms text"></i>
+              </li>
+            </div>
+          </a>
+          <hr /> -->
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

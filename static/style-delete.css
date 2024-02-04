@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+  color: #fff;
+}
+
+.container {
+  max-width: 428px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #313438;
+}
+
+.hero {
+  background: linear-gradient(
+    90deg,
+    rgba(66, 159, 124, 1) 0%,
+    rgba(161, 193, 78, 1) 100%
+  );
+  padding: 2em 0;
+}
+
+.hero-info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.back-btn {
+  font-size: 1.7em;
+  padding-left: 1em;
+}
+
+i {
+  font-size: 1.5em;
+}
+
+.contact-name {
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.relationship {
+  width: 6em;
+  text-align: center;
+  padding: 0.4em 0.5em;
+  border-radius: 100px;
+  border-top-left-radius: 0;
+  background-color: #75a85e;
+  font-size: 0.8em;
+}
+
+.contact-info {
+  padding: 3em 1.5em;
+}
+
+.info-line {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 1em 2em;
+  margin-top: 2em;
+  border-radius: 20px;
+
+  box-shadow: inset 6px 6px 12px #2d2f33, inset -6px -6px 12px #35393d;
+}
+
+p {
+  margin: 0;
+  padding-bottom: 2em;
+}
+
+.icon-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(66, 159, 124, 1) 0%,
+    rgba(161, 193, 78, 1) 100%
+  );
+  border-radius: 100px;
+  padding: 0.5em;
+}
+
+.edit-contact {
+  padding: 1.5em 3.5em;
+  text-align: center;
+}
+
+.button-container {
+  padding: 2em 3.5em;
+}
+
+.update-contact {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 1em 2em;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px #2d2f33, -6px -6px 12px #35393d;
+}
+
+.button {
+  border: none;
+  font-size: 1.3em;
+  padding-left: 1.5em;
+  outline: none;
+  background: #313438;
+  color: #fff;
+}
